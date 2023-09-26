@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Cmpatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Elizabeth Njeri</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c7121bb256.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>Elizabeth Njeri</h1>
+               <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+               </ul>
+               <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineeer</p>
+            </div>
+        </div>
+    </div>
+
+       
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user2.png" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            In the ever-evolving world of tech, I embrace the role of a perpetual learner. Each project is a new chapter in my coding journey, an opportunity to expand my skills and contribute meaningful solutions to the digital landscape.
+                        </p> 
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Fullstack Developer</span><br> Backend Development</li>
+                                <li><span>Web Development</span><br> Web app Development</li>
+                                <li><span>AI Data Training</span><br> Backend developer</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022- Current</span><br>Senior AI Data Trainer at Invisible Technologies</li>
+                                <li><span>2021-2022</span><br>AI Data Trainer</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021</span><br> Fullstack trainning at Moringa School</li>
+                                <li><span>2019</span><br> Bachelor of Science in Mathematics and Computer Science at Multimedia University</li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">Services Offered</h1> 
+                <div class="services-list">
+                    <div>
+                        <h2>UX Designs</h2>
+                        <p>At the heart of every successful digital product lies an exceptional user experience. I specialize in crafting user-centered design solutions that delight users and drive business growth. With a passion for human-centric design, I bring expertise in UX research, interaction design, and usability testing to create meaningful experiences.</p>
+                            
+                    </div>
+                    <div>
+                    <br>
+                        <h2>AI Data Trainig</h2>
+                        <p>My AI data training services empower your machine learning models to deliver accurate, reliable results. By leveraging our expertise, you can accelerate model development, reduce errors, and gain a competitive edge in the AI landscape.</p>
+                    <br>
+                    </div>
+                    <div>
+                    <br>
+                        <h2>Web Development</h2>
+                        <p>My web development services empower your online presence. I prioritize performance, security, and a seamless user experience, resulting in websites that engage, convert, and grow your digital footprint.Your goals are at the heart of every project. I collaborate closely with you to understand your objectives, brand identity, and target audience.</p>
+                            
+                    </div>     
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p><i class="fa-regular fa-paper-plane"></i>izzienjeri@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>+254 746 724 466</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100094155163187"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/MoffatMokwa"><i class="fa-brands fa-twitter-square"></i></a>
+                            <a href="https://www.instagram.com/mokwathedeveloper/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/mokwamoffat/"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    
+                        </div>
+                             <div class="contact-right">
+                            
+                             </div>
+                </div>
+            </div>
+        </div>
+        <!------------copyright------------>
+        <div id="copyright">
+            <div class="container">
+                <p>Copyright &copy; izziedesigns.<i class="fa-sharp fa-solid fa-heart"></i> All rights reserved</p>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname)
+{ 
+for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+}
+for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+}
+event.currentTarget.classList.add("active-link");
+document.getElementById(tabname).classList.add("active-tab")
+    }
+
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
