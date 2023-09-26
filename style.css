@@ -29,6 +29,7 @@ nav {
 h1 {
     font-size: 24px;
     margin: 0;
+    font-style:inherit;
 }
 
 ul {
